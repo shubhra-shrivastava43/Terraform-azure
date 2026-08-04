@@ -1,28 +1,20 @@
-name: My First Pipeline
+name: Terraform Demo
 
 on:
   workflow_dispatch:
 
 jobs:
-
-  hello:
+  terraform:
 
     runs-on: ubuntu-latest
 
     steps:
 
-      - name: Download Repository
-
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Print Message
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
 
-        run: echo "Hello Dost"
-
-      - name: Show Current Folder
-
-        run: pwd
-
-      - name: Show Files
-
-        run: ls
+      - name: Check Terraform Version
+        run: terraform version
