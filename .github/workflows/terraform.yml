@@ -1,4 +1,4 @@
-name: Terraform CI
+name: Terraform V
 
 on:
   workflow_dispatch:
@@ -11,6 +11,11 @@ jobs:
 
     steps:
 
+      - uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
+      
       - name: Checkout Repository
 
         uses: actions/checkout@v4
