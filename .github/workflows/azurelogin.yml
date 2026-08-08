@@ -29,6 +29,8 @@ jobs:
       - name: Terraform validate
         run:  terraform validate 
       - name: Setup TFLint
+      - name: Check TFLint Version
+        run: tflint --version
         uses: terraform-linters/setup-tflint@v5
       - name: Initialize TFLint
         run: tflint --init
