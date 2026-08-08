@@ -1,22 +1,22 @@
 terraform {
-    required_providers{
-        azurerm={
-        source="hashicorp/azurerm"
-        version="4.78.0"
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "4.78.0"
 
     }
-}
+  }
 }
 
 provider "azurerm" {
-    features{
+  features {
 
-    }
-  
+  }
+
 }
 
 resource "azurerm_resource_group" "rg69" {
-    name="ty"
-    location="eastus"
-  
+  name     = "ty"
+  location = "eastus"
+
 }
