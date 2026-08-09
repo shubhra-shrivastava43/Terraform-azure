@@ -45,8 +45,8 @@ jobs:
       - name: Trivy IaC Scan
         uses: aquasecurity/trivy-action@master
         with:
-        scan-type: 'config'
-        hide-progress: true
-        format: 'table'
-        exit-code: '1'
-        severity: 'CRITICAL,HIGH'
+          scan-type: 'config'
+          hide-progress: true
+          format: 'table'
+          exit-code: '1'
+          severity: 'CRITICAL,HIGH'
