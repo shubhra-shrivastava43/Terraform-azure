@@ -51,6 +51,7 @@ jobs:
           exit-code: '1'
           severity: 'CRITICAL,HIGH'
       - name: Terraform Plan
-        run: terraform plan
-      - name: Terraform apply
-        run: terraform apply -auto-approve
+        run: terraform plan -out=tfplan
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve tfplan
