@@ -52,5 +52,5 @@ jobs:
           severity: 'CRITICAL,HIGH'
       - name: Terraform Plan
         run: terraform plan
-      - name: Terraform Plan
-        run: terraform apply
+      - name: Terraform apply
+        run: terraform apply -auto-approve
