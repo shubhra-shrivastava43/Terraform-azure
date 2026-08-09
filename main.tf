@@ -9,11 +9,11 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name="tyooo"
+    resource_group_name  = "tyooo"
     storage_account_name = "bhakuaaaaaaa"
-    container_name="blloooooddd"
-    key ="bkp.tfstate"
-    
+    container_name       = "blloooooddd"
+    key                  = "bkp.tfstate"
+
   }
 }
 
