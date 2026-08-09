@@ -24,8 +24,8 @@ provider "azurerm" {
 
 }
 
-resource "azurerm_resource_group" "rg69" {
-  name     = "tyooo"
+resource "azurerm_resource_group" "rg9" {
+  name     = "tooo"
   location = "eastus"
 
 }
