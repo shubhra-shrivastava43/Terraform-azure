@@ -1,7 +1,14 @@
 name: Terraform CI
 
 on:
-  workflow_dispatch:
+
+ pull_request:
+    branches:
+      - main
+    workflow_dispatch:
+concurrency:
+  group: terraform-production
+  cancel-in-progress: false
 
 jobs:
   terraform:
@@ -53,5 +60,5 @@ jobs:
       - name: Terraform Plan
         run: terraform plan -out=tfplan
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve tfplan
+      # - name: Terraform Apply
+      #   run: terraform apply -auto-approve tfplan
