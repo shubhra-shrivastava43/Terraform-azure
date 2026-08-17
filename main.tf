@@ -29,3 +29,9 @@ resource "azurerm_resource_group" "rg9" {
   location = "eastus"
 
 }
+
+resource "azurerm_resource_group" "rg8" {
+  name     = "tpo"
+  location = "eastus"
+
+}
